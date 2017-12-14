@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="WeatherTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body background="resources/bamboo1.jpg">
+<div id="weather"></div>
+<p>Current Temp: <span id="temp"></span></p>
+<p>Current Wind: <span id="wind"></span></p>
+
+<script>
+    var weather = new XMLHttpRequest();
+    weather.open("GET", "http://api.wunderground.com/api/aad321a1306b6454/conditions/q/MO/kansas_city.json", false);
+    weather.send(null);
+
+    var r = JSON.parse(weather.response);
+
+    var weather = "Current location: " + r.current_observation.display_location.full + "  <p>";
+
+    var temp = r.current_observation.temperature_string+ "  <p>";
+    var wind = r.current_observation.wind_string+ "  <p>";
+
+
+
+    getWeather("weather",weather);
+    getWeather("temp",temp);
+    getWeather("wind",wind);
+
+    function getWeather(id,res){
+        document.getElementById(id).innerHTML=res;
+    }﻿
+
+
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

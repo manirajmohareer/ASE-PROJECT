@@ -1,0 +1,179 @@
+
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" href="estilo.css"/>
+    <meta charset="UTF-8"/>
+
+    <meta name="robots" content="noindex">
+    <script type="text/javascript" src="<http://code.jquery.com/jquery-1.7.2.min.js>"></script>
+    <script type="text/javascript" src="script.js"></script>
+    
+
+    <style id="jsbin-css">
+        @font-face { font-family: Century; src: url('GOTHIC.ttf'); }
+        body{
+            font-family: Century;
+            color: #fff;
+            padding:20px;
+            overflow: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            
+        }
+
+        h1 {
+            position: fixed;
+        }
+
+        footer {
+            font-family: Arial;
+            font-size: 10px;
+            position: fixed;
+            bottom: 10px;
+            left: 10px
+        }
+
+        footer a {
+            color: #fff;
+        }
+
+        .pagina{
+            position: center;
+            top: 120px;
+            height:auto;
+            margin: 0 auto;
+            text-align: left;
+            width: 800px;
+
+        }
+
+        .linha{
+            width:auto;
+            padding:5px;
+            height:auto;
+            display:table;
+        }
+
+        .tile{
+            height:100px;
+            width:100px;
+            float:left;
+            margin:0 5px 0 0;
+            padding:2px;
+        }
+
+        .tileLargo{
+            width:210px;
+        }
+
+        .amarelo{
+            background:#DAA520;
+        }
+
+        .vermelho{
+            background:#CD0000;
+        }
+
+        .azul{
+            background:#4682B4;
+        }
+
+        .verde{
+            background-color: #2E8B57;
+        }
+
+        .selecionado{
+            background-color: #483D8B;
+        }
+    </style>
+</head>
+<body background="resources/splashbg.jpg">
+
+
+<div class="pagina">
+    <div class="linha">
+        <a href="http://localhost:8000">
+        <div class="tile amarelo">
+            <span class="titulo"  href="http://localhost:8000"><b>Nutrients<br/>Required</b></span>
+        </div>
+        </a>
+
+        <a href="http://localhost:8000">
+        <div class="tile vermelho">
+            <span class="titulo"><b>Predict </br> Crops</b></span><br/>
+        </div>
+            </a>
+
+        <a href="index.html">
+        <div class="tile tileLargo amarelo">
+            <span class="titulo"><b>Know Crop Health</b></span><br/>
+        </div>
+        </a>
+        
+        <a href="fertilizer.php">
+        <div class="tile tileLargo vermelho">
+            <span class="titulo"> <b>Fertilizer Chart</b></span><br/>
+        </div>
+        </a>
+
+        <a href="sellw.html">
+        <div class="tile amarelo">
+            <span class="titulo"><b>Sell On<br/>Web Farms</b></span>
+        </div>
+        </a>
+    </div>
+
+    <div class="linha">
+        <a href="ecommerce/profile.php">
+        <div class="tile tileLargo amarelo">
+            <span class="titulo"><b>Web Farms Preview</b></span><br/>
+        </div>
+        </a>
+        <a href="https://platform.fatsecret.com/api/static/sample/simple/simple2.html">
+        <div class="tile vermelho">
+		
+            <span class="titulo"><br>Nutrient </br> Calculator</b></span><br/>
+        </div>
+        </a>
+        <a href="about.html">
+        <div class="tile amarelo">
+            <span class="titulo"><b>About</b></span><br/>
+        </div>
+        </a>
+        <a href="CONTACT.html">
+        <div class="tile vermelho">
+            <span class="titulo"><b>Contact</b></span><br/>
+        </div>
+        </a>
+        <a href="demo.php">
+            <div class="tile tileLargo amarelo">
+                <span class="titulo"><br></b></span><br/>
+        </div>
+        </a>
+    </div>
+
+
+</div>
+</div>
+    
+    
+    
+
+<script>
+    $(function(){
+        $(".tile").mousedown(function(){
+            $(this).addClass("selecionado");
+        });
+
+        $(".tile").mouseup(function(){
+            $(this).removeClass("selecionado");
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
